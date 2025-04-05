@@ -6,7 +6,7 @@ module.exports = {
   name: 'help',
   description: 'Show available commands with descriptions',
   role: 1,
-  author: 'GeoDevz69',
+  author: 'BONUMMASTER',
   
   execute(senderId, args, pageAccessToken) {
     const commandsDir = path.join(__dirname, '../cmds');
@@ -32,7 +32,7 @@ module.exports = {
 
     // Display all commands if "help all" is provided
     if (args[0]?.toLowerCase() === 'all') {
-      const helpTextMessage = `╭─❍「 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦 」\n│ [ Total Commands : ${totalCommands} ]\n│ ${commands.map((cmd, index) => `\n│ ${index + 1}. ${cmd.title}\n│ ○ ${cmd.description}`).join('')}\n│\n╰────────────⧕\n\n\n├─────☾⋆\n│ » Owner: GeoDevz69\n│ » Age: 14yr old\n│ » Status: Taken\n│ » Hobby: Siya lang\n╰────────────⧕`;
+      const helpTextMessage = `╭─❍「 BONUMMASTER 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦 」\n│ [ Total Commands : ${totalCommands} ]\n│ ${commands.map((cmd, index) => `\n│ ${index + 1}. ${cmd.title}\n│ ○ ${cmd.description}`).join('')}\n│\n╰────────────⧕\n\n\n├─────☾⋆\n│ » Developer Owner: BonumMaster\n│ » GRPUP: UNDERGROUND SEC PH\n│ » SKILLS: DECODER\n│ » WORK: ENCODE DECODER\n╰────────────⧕`;
       return sendMessage(senderId, { text: helpTextMessage }, pageAccessToken);
     }
 
@@ -45,7 +45,7 @@ module.exports = {
       }, pageAccessToken);
     }
 
-    const helpTextMessage = `╭─❍「 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦 」\n│ »  Page View : [ ${page}/${totalPages} ]\n│ » Total Commands : [ ${totalCommands} ]\n│ ${commandsForPage.map((cmd, index) => `\n│ ${startIndex + index + 1}. ${cmd.title}\n│ ○ ${cmd.description}`).join('')}\n╰────────────⧕\n\n\n├─────☾⋆\n│ » Note : Use "help [page]"\n│ to switch pages, or\n│ "help all" to see all\n│ commands!\n╰────────────⧕`;
+    const helpTextMessage = `╭─❍「 BONUMMASTER 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦 」\n│ »  Page View : [ ${page}/${totalPages} ]\n│ » Total Commands : [ ${totalCommands} ]\n│ ${commandsForPage.map((cmd, index) => `\n│ ${startIndex + index + 1}. ${cmd.title}\n│ ○ ${cmd.description}`).join('')}\n╰────────────⧕\n\n\n├─────☾⋆\n│ » Note : Use "help [page]"\n│ to switch pages, or\n│ "help all" to see all\n│ commands!\n╰────────────⧕`;
 
 
     const quickReplies = commandsForPage.map((cmd) => ({
